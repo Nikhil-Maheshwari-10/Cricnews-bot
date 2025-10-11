@@ -1,4 +1,4 @@
--Steps to start the project using Poetry :
+Steps to start the project using Poetry :
 
 Step 1 : Poetry shell
 
@@ -6,7 +6,9 @@ Step 2 : Poetry install
 
 Step 3 : streamlit run main.py
 
--.env includes :
+.env includes :
 
-GEMINI_API_KEY=
-CRICKETDATA_API_KEY=
+GEMINI_API_KEY
+CRICKETDATA_API_KEY
+
+Deployed url : https://cricnews-bot.streamlit.app
