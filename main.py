@@ -227,7 +227,7 @@ Important: Use the above cricket data to answer questions accurately. Remember t
         llm_response = completion(
             model="gemini/gemini-2.0-flash",
             api_key=os.getenv("GEMINI_API_KEY"),
-            temperature=0.1,
+            temperature=0.3,
             messages=messages
         )
         
@@ -265,7 +265,6 @@ I'm here to answer all your cricket-related questions with **live match data**. 
 🏏 **Live match updates** 
 📊 **Recent match results**
 📅 **Match details** 
-🎯 **Player stats**
 
 I'll remember our conversation, so feel free to ask follow-up questions!
 
@@ -368,3 +367,4 @@ if user_input := st.chat_input("Ask me anything about cricket..."):
         "role": "assistant",
         "content": response
     })
+
