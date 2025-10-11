@@ -6,9 +6,10 @@ Step 2 : Poetry install
 
 Step 3 : streamlit run main.py
 
-.env includes :
+.env Variables :
 
-GEMINI_API_KEY
-CRICKETDATA_API_KEY
+1. GEMINI_API_KEY
+2. CRICKETDATA_API_KEY
 
 Deployed url : https://cricnews-bot.streamlit.app
+
