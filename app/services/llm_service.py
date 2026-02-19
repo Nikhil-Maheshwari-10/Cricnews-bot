@@ -1,5 +1,5 @@
 from litellm import completion
-from app.config import GEMINI_API_KEY, CRICKET_SYSTEM_PROMPT
+from app.config import GEMINI_API_KEY, CRICKET_SYSTEM_PROMPT, LLM_MODEL
 from app.services.cricket_service import get_cricket_context
 from app.logger import logger
 
@@ -46,9 +46,9 @@ Important: Use the above cricket data to answer questions accurately. Remember t
             "content": user_message
         })
         
-        # Call LLM with Gemini model
+        # Call LLM with dynamic model selection
         llm_response = completion(
-            model="gemini/gemini-2.5-flash-lite",
+            model=LLM_MODEL,
             api_key=GEMINI_API_KEY,
             temperature=0.3,
             messages=messages

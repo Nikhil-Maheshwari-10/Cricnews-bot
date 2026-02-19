@@ -1,28 +1,14 @@
 import os
 from dotenv import load_dotenv
 
-# Load environment variables (Local development)
+# Load environment variables
 load_dotenv()
 
-def get_secret(key):
-    # Try environment variable first
-    val = os.getenv(key)
-    if val:
-        return val
-    
-    # Fallback to streamlit secrets
-    try:
-        import streamlit as st
-        if key in st.secrets:
-            return st.secrets[key]
-    except Exception:
-        pass
-    return None
-
-# --- Cricket API Configuration ---
-CRICKETDATA_API_KEY = get_secret("CRICKETDATA_API_KEY")
+# --- Configuration ---
+CRICKETDATA_API_KEY = os.getenv("CRICKETDATA_API_KEY")
 CRICKETDATA_BASE_URL = "https://api.cricapi.com/v1"
-GEMINI_API_KEY = get_secret("GEMINI_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+LLM_MODEL = os.getenv("LLM_MODEL") or "gemini/gemini-2.5-flash-lite"
 
 # --- System Prompt for Cricket-Only Chatbot ---
-CRICKET_SYSTEM_PROMPT = get_secret("CRICKET_SYSTEM_PROMPT")
+CRICKET_SYSTEM_PROMPT = os.getenv("CRICKET_SYSTEM_PROMPT")

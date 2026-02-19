@@ -51,8 +51,11 @@ CRICKETDATA_API_KEY=your_cricketdata_api_key
 # Gemini API Key for LLM
 GEMINI_API_KEY=your_gemini_api_key
 
+# Model Selection (Optional: defaults to gemini-2.5-flash-lite)
+LLM_MODEL="your_model"
+
 # System Prompt (Optional: uses internal default if omitted)
-CRICKET_SYSTEM_PROMPT="..."
+CRICKET_SYSTEM_PROMPT="your_system_prompt"
 ```
 
 ## Usage 🛠️
